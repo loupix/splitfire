@@ -73,3 +73,28 @@ server {
 
 }
 ```
+
+
+
+### Test
+
+Ajout tweet
+
+```sh
+curl -d '{"author":"loic","message":"test ajout texte et #hashtag ou #multiHash"}' -H "Content-Type: application/json" -X POST http://127.0.0.1/events
+```
+renvois l'identifiant
+
+
+Get Tweet
+
+```sh
+http://127.0.0.1/events?hashtags[]=tag
+```
+
+
+Paramètres
+  - author (String)
+  - hashtags (Array)
+  - page (Default 1)
+  - per_page (Default 25)

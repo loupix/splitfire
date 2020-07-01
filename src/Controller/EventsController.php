@@ -93,6 +93,10 @@ class EventsController extends AbstractController
         $per_page = is_null($per_page) ? 25 : $per_page;
 
 
+        $page = $page<=0 ? 1 : $page;
+        $per_page = $per_page<=0 ? 25 : $per_page;
+
+
         $em = $this->getDoctrine()->getManager();
         $tweetRepository = $em->getRepository(Tweet::class);
 
