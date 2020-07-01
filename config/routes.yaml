@@ -1,0 +1,13 @@
+#index:
+#    path: /
+#    controller: App\Controller\DefaultController::index
+
+events_add:
+  path: /events
+  controller: App\Controller\EventsController::add
+  methods:  [POST,PUT]
+
+events_get:
+  path: /events
+  controller: App\Controller\EventsController::view
+  methods:  [GET,HEAD]
