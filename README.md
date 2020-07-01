@@ -14,11 +14,7 @@ Développé avec [Symfony](https://symfony.com/)
 ### Installation
 
 
-<<<<<<< HEAD
-Téléchagement des fichiers
-=======
 Téléchargement des fichiers
->>>>>>> origin/master
 
 ```sh
 $ composer install
@@ -77,9 +73,6 @@ server {
 
 }
 ```
-<<<<<<< HEAD
-
-
 
 ### Test
 
@@ -103,5 +96,3 @@ Paramètres
   - hashtags (Array)
   - page (Default 1)
   - per_page (Default 25)
-=======
->>>>>>> origin/master
