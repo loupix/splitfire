@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services https://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.project_dir">/home/loupix/Documents/SplitFire</parameter>
+    <parameter key="kernel.project_dir">/home/loupix/Documents/splitfire</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
-    <parameter key="kernel.cache_dir">/home/loupix/Documents/SplitFire/var/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/home/loupix/Documents/SplitFire/var/log</parameter>
+    <parameter key="kernel.cache_dir">/home/loupix/Documents/splitfire/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/home/loupix/Documents/splitfire/var/log</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="DoctrineBundle">Doctrine\Bundle\DoctrineBundle\DoctrineBundle</parameter>
@@ -14,19 +14,19 @@
     </parameter>
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
-        <parameter key="path">/home/loupix/Documents/SplitFire/vendor/symfony/framework-bundle</parameter>
+        <parameter key="path">/home/loupix/Documents/splitfire/vendor/symfony/framework-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
-        <parameter key="path">/home/loupix/Documents/SplitFire/vendor/doctrine/doctrine-bundle</parameter>
+        <parameter key="path">/home/loupix/Documents/splitfire/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="DoctrineMigrationsBundle" type="collection">
-        <parameter key="path">/home/loupix/Documents/SplitFire/vendor/doctrine/doctrine-migrations-bundle</parameter>
+        <parameter key="path">/home/loupix/Documents/splitfire/vendor/doctrine/doctrine-migrations-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\MigrationsBundle</parameter>
       </parameter>
       <parameter key="MakerBundle" type="collection">
-        <parameter key="path">/home/loupix/Documents/SplitFire/vendor/symfony/maker-bundle/src</parameter>
+        <parameter key="path">/home/loupix/Documents/splitfire/vendor/symfony/maker-bundle/src</parameter>
         <parameter key="namespace">Symfony\Bundle\MakerBundle</parameter>
       </parameter>
     </parameter>
@@ -73,11 +73,11 @@
       <parameter key="cookie_samesite">lax</parameter>
       <parameter key="gc_probability">1</parameter>
     </parameter>
-    <parameter key="session.save_path">/home/loupix/Documents/SplitFire/var/cache/dev/sessions</parameter>
+    <parameter key="session.save_path">/home/loupix/Documents/splitfire/var/cache/dev/sessions</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="data_collector.templates" type="collection"/>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">/home/loupix/Documents/SplitFire/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
+    <parameter key="debug.container.dump">/home/loupix/Documents/splitfire/var/cache/dev/App_KernelDevDebugContainer.xml</parameter>
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
@@ -149,7 +149,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/home/loupix/Documents/SplitFire/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/home/loupix/Documents/splitfire/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="doctrine.migrations.preferred_em">null</parameter>
     <parameter key="doctrine.migrations.preferred_connection">null</parameter>
@@ -236,7 +236,7 @@
       <tag name="container.no_preload"/>
       <argument type="tagged_iterator" tag="kernel.cache_warmer"/>
       <argument>true</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/App_KernelDevDebugContainerDeprecations.log</argument>
     </service>
     <service id="cache_clearer" class="Symfony\Component\HttpKernel\CacheClearer\ChainCacheClearer" public="true">
       <argument type="tagged_iterator" tag="kernel.cache_clearer"/>
@@ -335,21 +335,21 @@
         <argument>/_fragment</argument>
       </call>
     </service>
-    <service id=".2_~6AE8KDT" public="false">
+    <service id=".2_~Pn7WrNP" public="false">
       <argument type="service" id="request_stack"/>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="getAndCleanOutputBuffer"/>
     </service>
-    <service id=".1_~6AE8KDT" public="false">
+    <service id=".1_~Pn7WrNP" public="false">
       <argument type="service" id="request_stack"/>
       <argument>true</argument>
       <factory class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer" method="isDebug"/>
     </service>
     <service id="error_handler.error_renderer.html" class="Symfony\Component\ErrorHandler\ErrorRenderer\HtmlErrorRenderer">
-      <argument type="service" id=".1_~6AE8KDT"/>
+      <argument type="service" id=".1_~Pn7WrNP"/>
       <argument>UTF-8</argument>
       <argument type="service" id="debug.file_link_formatter" on-invalid="null"/>
-      <argument>/home/loupix/Documents/SplitFire</argument>
-      <argument type="service" id=".2_~6AE8KDT"/>
+      <argument>/home/loupix/Documents/splitfire</argument>
+      <argument type="service" id=".2_~Pn7WrNP"/>
       <argument type="service" id="logger" on-invalid="null"/>
     </service>
     <service id="console.error_listener" class="Symfony\Component\Console\EventListener\ErrorListener" public="false">
@@ -373,7 +373,7 @@
       <tag name="console.command" command="assets:install"/>
       <tag name="container.no_preload"/>
       <argument type="service" id="filesystem"/>
-      <argument>/home/loupix/Documents/SplitFire</argument>
+      <argument>/home/loupix/Documents/splitfire</argument>
       <call method="setName">
         <argument>assets:install</argument>
       </call>
@@ -564,9 +564,9 @@
     <service id="cache.app" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>++b8myMjRD</argument>
+      <argument>47TBt5ASko</argument>
       <argument>0</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -578,50 +578,50 @@
     <service id="cache.system" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="true">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>9+tK84UyZu</argument>
+      <argument>00-rtaMmSB</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>6D4dEEVWEe</argument>
+      <argument>P60JyTKHOA</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>Cl6Qc87pDp</argument>
+      <argument>fJYwxMawZ0</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>3uTxb-uimB</argument>
+      <argument>y6OxdTioc7</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.property_info" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
       <tag name="cache.pool"/>
       <tag name="kernel.reset" method="reset"/>
-      <argument>4etnhoaPvU</argument>
+      <argument>+zRS9dZRD+</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -631,7 +631,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="logger" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -660,7 +660,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/pools</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/pools</argument>
       <argument type="service" id="cache.default_marshaller" on-invalid="ignore"/>
       <call method="setLogger">
         <argument type="service" id="logger" on-invalid="ignore"/>
@@ -762,8 +762,8 @@
       </argument>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createConnection"/>
     </service>
-    <service id=".1_NativeFileSessionHandler~ZJ7pW0b" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/sessions</argument>
+    <service id=".1_NativeFileSessionHandler~oWxMYXD" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/sessions</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -797,12 +797,12 @@
       <deprecated package="symfony/framework-bundle" version="5.1">The "%service_id%" service is deprecated, use "$session-&gt;getAttributeBag()" instead.</deprecated>
     </service>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/sessions</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id=".1_NativeFileSessionHandler~ZJ7pW0b"/>
+      <argument type="service" id=".1_NativeFileSessionHandler~oWxMYXD"/>
     </service>
     <service id="session.abstract_handler" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\AbstractSessionHandler" public="false">
       <argument></argument>
@@ -1047,10 +1047,10 @@
       <argument type="service" id="debug.argument_resolver.inner"/>
       <argument type="service" id="debug.stopwatch"/>
     </service>
-    <service id=".2_int~zfUgV7N" class="int" public="false">
+    <service id=".2_int~y3ylHWd" class="int" public="false">
       <factory service="router.request_context" method="getHttpsPort"/>
     </service>
-    <service id=".1_int~zfUgV7N" class="int" public="false">
+    <service id=".1_int~y3ylHWd" class="int" public="false">
       <factory service="router.request_context" method="getHttpPort"/>
     </service>
     <service id="routing.resolver" class="Symfony\Component\Config\Loader\LoaderResolver" public="false">
@@ -1119,7 +1119,7 @@
       <argument type="service" id=".service_locator.vEnWPsK.router.default"/>
       <argument>kernel::loadRoutes</argument>
       <argument type="collection">
-        <argument key="cache_dir">/home/loupix/Documents/SplitFire/var/cache/dev</argument>
+        <argument key="cache_dir">/home/loupix/Documents/splitfire/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\CompiledUrlGenerator</argument>
         <argument key="generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\CompiledUrlGeneratorDumper</argument>
@@ -1169,13 +1169,13 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="logger" on-invalid="ignore"/>
-      <argument>/home/loupix/Documents/SplitFire</argument>
+      <argument>/home/loupix/Documents/splitfire</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
       <argument type="service" id="router.default"/>
-      <argument type="service" id=".1_int~zfUgV7N"/>
-      <argument type="service" id=".2_int~zfUgV7N"/>
+      <argument type="service" id=".1_int~y3ylHWd"/>
+      <argument type="service" id=".2_int~y3ylHWd"/>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\TemplateController" class="Symfony\Bundle\FrameworkBundle\Controller\TemplateController" public="true">
       <argument>null</argument>
@@ -1194,12 +1194,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id=".2_PhpArrayAdapter~acjuHY0" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/annotations.php</argument>
+    <service id=".2_PhpArrayAdapter~Vi4.JpA" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id=".1_ArrayCache~acjuHY0" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id=".1_ArrayCache~Vi4.JpA" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -1214,7 +1214,7 @@
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <tag name="annotations.cached_reader"/>
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id=".1_ArrayCache~acjuHY0"/>
+      <argument type="service" id=".1_ArrayCache~Vi4.JpA"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -1224,16 +1224,16 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>/home/loupix/Documents/SplitFire/var/cache/dev/annotations.php</argument>
+      <argument>/home/loupix/Documents/splitfire/var/cache/dev/annotations.php</argument>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!.*Controller$))#</argument>
       <argument>true</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id=".2_PhpArrayAdapter~acjuHY0"/>
+      <argument type="service" id=".2_PhpArrayAdapter~Vi4.JpA"/>
     </service>
     <service id="secrets.vault" class="Symfony\Bundle\FrameworkBundle\Secrets\SodiumVault">
       <tag name="container.env_var_loader"/>
-      <argument>/home/loupix/Documents/SplitFire/config/secrets/dev</argument>
+      <argument>/home/loupix/Documents/splitfire/config/secrets/dev</argument>
       <argument type="service" id="secrets.decryption_key" on-invalid="ignore"/>
     </service>
     <service id="secrets.decryption_key" class="Symfony\Component\String\LazyString" public="false">
@@ -1242,7 +1242,7 @@
       <factory class="Symfony\Component\String\LazyString" method="fromCallable"/>
     </service>
     <service id="secrets.local_vault" class="Symfony\Bundle\FrameworkBundle\Secrets\DotenvVault">
-      <argument>/home/loupix/Documents/SplitFire/.env.dev.local</argument>
+      <argument>/home/loupix/Documents/splitfire/.env.dev.local</argument>
     </service>
     <service id="doctrine.dbal.logger.chain" class="Doctrine\DBAL\Logging\LoggerChain" public="false" abstract="true">
       <call method="addLogger">
@@ -1362,7 +1362,7 @@
       <argument type="collection"/>
       <factory service="doctrine.dbal.connection_factory" method="createConnection"/>
     </service>
-    <service id=".1_ServiceLocator~XNB4NVA" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id=".1_ServiceLocator~I_FFuG6" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <argument type="collection"/>
     </service>
     <service id="doctrine.orm.proxy_cache_warmer" class="Symfony\Bridge\Doctrine\CacheWarmer\ProxyCacheWarmer" public="false">
@@ -1538,7 +1538,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>/home/loupix/Documents/SplitFire/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>/home/loupix/Documents/splitfire/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -1568,7 +1568,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>/home/loupix/Documents/SplitFire/src/Entity</argument>
+        <argument>/home/loupix/Documents/splitfire/src/Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -1632,7 +1632,7 @@
     <service id="doctrine.migrations.configuration" class="Doctrine\Migrations\Configuration\Configuration" public="false">
       <call method="addMigrationsDirectory">
         <argument>DoctrineMigrations</argument>
-        <argument>/home/loupix/Documents/SplitFire/migrations</argument>
+        <argument>/home/loupix/Documents/splitfire/migrations</argument>
       </call>
       <call method="setAllOrNothing">
         <argument>false</argument>
@@ -1766,7 +1766,7 @@
       <argument type="service" id="filesystem"/>
       <argument type="service" id="maker.autoloader_util"/>
       <argument type="service" id="maker.file_link_formatter"/>
-      <argument>/home/loupix/Documents/SplitFire</argument>
+      <argument>/home/loupix/Documents/splitfire</argument>
       <argument>null</argument>
     </service>
     <service id="maker.autoloader_finder" class="Symfony\Bundle\MakerBundle\Util\ComposerAutoloaderFinder" public="false">
@@ -1833,7 +1833,7 @@
       <tag name="maker.command"/>
       <argument type="service" id="maker.file_manager"/>
       <argument type="service" id="maker.doctrine_helper"/>
-      <argument>/home/loupix/Documents/SplitFire</argument>
+      <argument>/home/loupix/Documents/splitfire</argument>
       <argument type="service" id="maker.generator"/>
       <argument type="service" id="maker.entity_class_generator"/>
     </service>
@@ -1897,7 +1897,7 @@
     </service>
     <service id="maker.maker.make_migration" class="Symfony\Bundle\MakerBundle\Maker\MakeMigration" public="false">
       <tag name="maker.command"/>
-      <argument>/home/loupix/Documents/SplitFire</argument>
+      <argument>/home/loupix/Documents/splitfire</argument>
     </service>
     <service id=".instanceof.Symfony\Contracts\Service\ServiceSubscriberInterface.0.App\Controller\EventsController" class="App\Controller\EventsController" autowire="true" abstract="true"/>
     <service id=".instanceof.Symfony\Bundle\FrameworkBundle\Controller\AbstractController.0.App\Controller\EventsController" class="App\Controller\EventsController" autowire="true" abstract="true"/>

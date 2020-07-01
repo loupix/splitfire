@@ -90,7 +90,7 @@ class EventsController extends AbstractController
         $per_page = $request->query->get('per_page');
 
         $page = is_null($page) ? 1 : $page;
-        $per_page = is_null($per_page) ? 25 : $page;
+        $per_page = is_null($per_page) ? 25 : $per_page;
 
 
         $em = $this->getDoctrine()->getManager();
